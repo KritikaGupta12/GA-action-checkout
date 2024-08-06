@@ -1,6 +1,8 @@
 on:
-  # push:
-  workflow_dispatch:
+  push:
+    paths:
+      - 'test.txt'
+  # workflow_dispatch:
     branches:
       - main
 permissions:
