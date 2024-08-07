@@ -1,0 +1,21 @@
+name: Trigger on PR creation for main banch
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+
+jobs:
+  check-pr:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/chechout@v3
+        
+      - name: Notify PR creation
+        run: |
+          echo "A pull request has been created targeting the main branch"
+        
