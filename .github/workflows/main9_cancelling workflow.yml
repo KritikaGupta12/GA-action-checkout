@@ -1,4 +1,4 @@
-name: Long Running Workflow
+name: Long Running Workflow cancelling
 
 on:
   push:
