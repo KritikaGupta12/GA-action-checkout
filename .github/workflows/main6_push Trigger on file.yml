@@ -1,4 +1,4 @@
-name: Read text file on update (push trigger)
+name: Push trigger on file update
 
 on: 
   push:
