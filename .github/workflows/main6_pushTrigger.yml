@@ -1,0 +1,17 @@
+name: Read text file on update (push trigger)
+
+on: 
+  push:
+    branches:
+      - main
+    paths:
+      - 'test.txt'
+jobs:
+  read-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Read the text file
+        run: cat test.txt
