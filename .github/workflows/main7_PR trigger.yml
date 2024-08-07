@@ -13,7 +13,7 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/chechout@v3
+        uses: actions/checkout@v3
         
       - name: Notify PR creation
         run: |
