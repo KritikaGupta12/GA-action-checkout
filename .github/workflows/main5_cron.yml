@@ -6,7 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    steps:
 
-  steps: 
-    - name: Runs a script
-      run: echo "This is a scheduled workflow"
+      - name: Run a script
+        run: echo "This is a scheduled action!"
