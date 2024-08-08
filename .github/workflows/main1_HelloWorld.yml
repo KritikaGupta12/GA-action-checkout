@@ -13,6 +13,11 @@ jobs:
           echo "Hello World"
         shell: bash
 
+      - name: Build project
+        run: |
+          mkdir -p build
+          echo "This is a build output" > build/output.txt
+          
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
