@@ -1,11 +1,20 @@
 on: 
   workflow_dispatch: 
+  
 jobs:
   display_files:
     name: run a sample command
+    
     runs-on: ubuntu-latest
+    
     steps:        
       - name: display output
         run: |
           echo "Hello World"
         shell: bash
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: build/
